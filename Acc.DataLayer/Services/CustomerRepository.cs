@@ -10,7 +10,13 @@ namespace Acc.DataLayer.Services
 {
     public class CustomerRepository : ICustomerRepository
     {
-        Acc_DBEntities dB = new Acc_DBEntities();
+        private Acc_DBEntities dB;
+
+        public CustomerRepository(Acc_DBEntities context)
+        {
+            dB = context;
+        }
+
         public List<Customers> GetAllCustomers()
         {
             return dB.Customers.ToList();

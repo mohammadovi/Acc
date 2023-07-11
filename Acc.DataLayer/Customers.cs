@@ -17,6 +17,7 @@ namespace Acc.DataLayer
     
     public partial class Customers
     {
+       
         public int CustomerID { get; set; }
         public string Name { get; set; }
         public string Mobile { get; set; }
